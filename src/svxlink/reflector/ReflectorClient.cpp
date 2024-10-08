@@ -369,7 +369,7 @@ void ReflectorClient::handleMsgAuthResponse(std::istream& is)
   }
 
   string auth_key = lookupUserKey(msg.callsign());
-  if (!auth_key.empty() && msg.verify(auth_key, m_auth_challenge))
+  if (msg.verify(auth_key, m_auth_challenge))
   {
     vector<string> connected_nodes;
     m_reflector->nodeList(connected_nodes);
@@ -517,6 +517,9 @@ void ReflectorClient::handleHeartbeat(Async::Timer *t)
 
 std::string ReflectorClient::lookupUserKey(const std::string& callsign)
 {
+
+  /*
+  
   string auth_group;
   if (!m_cfg->getValue("USERS", callsign, auth_group) || auth_group.empty())
   {
@@ -533,6 +536,18 @@ std::string ReflectorClient::lookupUserKey(const std::string& callsign)
     return "";
   }
   return auth_key;
+  
+  */
+  
+  string auth_key;
+  if (!m_cfg->getValue("GLOBAL", "AUTH_KEY", auth_key) || auth_key.empty())
+  {
+    cout << "*** ERROR: AUTH_KEY not found in svxreflector.conf [GLOBAL] section." << endl;
+    return "";
+  }
+  return auth_key;
+  
+  
 } /* ReflectorClient::lookupUserKey */
 
 
