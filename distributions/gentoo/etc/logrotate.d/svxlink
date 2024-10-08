@@ -1,4 +1,4 @@
-/var/log/svxlink /var/log/remotetrx {
+/var/log/svxlink.log /var/log/remotetrx {
     missingok
     notifempty
     weekly

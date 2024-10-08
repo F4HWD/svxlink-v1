@@ -5,7 +5,7 @@
 #############################################################################
 
 # The log file to use
-LOGFILE=/var/log/svxlink
+LOGFILE=/var/log/svxlink.log
 
 # The PID file to use
 PIDFILE=/var/run/svxlink.pid

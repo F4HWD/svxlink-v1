@@ -1,4 +1,4 @@
-/var/log/svxlink {
+/var/log/svxlink.log {
     missingok
     notifempty
     weekly

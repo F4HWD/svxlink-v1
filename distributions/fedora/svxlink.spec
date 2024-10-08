@@ -69,8 +69,8 @@ find %{buildroot}%{_libdir} -type l -exec rm {} \;
 mkdir -p %{buildroot}/usr/share/svxlink
 cp -a sounds %{buildroot}/usr/share/svxlink/
 mkdir -p %{buildroot}/var/log
-touch %{buildroot}/var/log/svxlink
-touch %{buildroot}/var/log/svxlink.{1,2,3,4}
+touch %{buildroot}/var/log/svxlink.log
+touch %{buildroot}/var/log/svxlink.log.{1,2,3,4}
 
 
 %clean

@@ -28,7 +28,7 @@ while(1) {
         while(select($rout=$rin,undef,undef,0))
         {
             $data=<FIFOFH>;
-            if ( open(LOG, ">> /var/log/svxlink") ) {
+            if ( open(LOG, ">> /var/log/svxlink.log") ) {
                 print LOG scalar(localtime), ": $data";
                 close(LOG);
             } else {
