@@ -48,6 +48,11 @@ if(CURL_FOUND)
    message(FATAL_ERROR "Could not find the CURL library and development files.")
 endif(CURL_FOUND)
 
+# Find jsoncpp library
+pkg_check_modules (JSONCPP REQUIRED jsoncpp)
+include_directories(${JSONCPP_INCLUDE_DIRS})
+set(LIBS ${LIBS} ${JSONCPP_LIBRARIES})
+
 # Add project libraries
 set(LIBS ${LIBS} trx locationinfo asynccpp asyncaudio asynccore svxmisc)
 
