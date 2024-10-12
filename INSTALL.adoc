@@ -28,7 +28,6 @@ or "-devel".
 * *libgsm*: GSM audio codec (Required)
 * *libspeex*: The Speex audio codec (Optional)
 * *librtlsdr*: Support for RTL2832U DVB-T/SDR USB dongles (Optional)
-* *libqt*: Version 4. Framework for graphical applications (Optional)
 
 There also are some runtime dependencies which normally is needed to run a
 SvxLink system.
@@ -86,7 +85,6 @@ command line switch are:
 
   USE_ALSA          -- Set to NO to compile without Alsa sound support
   USE_OSS           -- Set to NO to compile without OSS sound support
-  USE_QT            -- Set to NO to compile without Qt (no Qtel)
   BUILD_STATIC_LIBS -- Set to YES to build static libraries as well as dynamic
   LIB_SUFFIX        -- Set to 64 on 64 bit systems to install in the lib64 dir
 
